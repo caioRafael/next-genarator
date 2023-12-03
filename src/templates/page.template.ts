@@ -1,5 +1,6 @@
 export default function PageTemplate(name: string){
-    const newCase = name[0].toLocaleUpperCase() + name.slice(1)
+    const routeName = name.split('/')
+    const newCase = routeName[routeName.length -1][0].toLocaleUpperCase() + routeName[routeName.length -1].slice(1)
     return `
 export default function ${newCase}Page(){
     return(
